@@ -1,0 +1,182 @@
+[
+  {
+    "id": "projects",
+    "index": "01",
+    "slug": "projects",
+    "route": "/projects",
+    "title": "Projects",
+    "kicker": "Built & shipped",
+    "subtitle": "Software that made it out",
+    "summary": "Applications and tools taken far enough to talk about — problem, decisions and what shipped.",
+    "atmosphere": {
+      "accent": "#7fb2ff",
+      "ink": "#eaf1ff",
+      "from": "#070c16",
+      "mid": "#12233f",
+      "to": "#050810",
+      "mood": "cool"
+    }
+  },
+  {
+    "id": "ai-lab",
+    "index": "02",
+    "slug": "ai-lab",
+    "route": "/ai-lab",
+    "title": "AI Lab",
+    "kicker": "Experiments in progress",
+    "subtitle": "Models, notebooks, unfinished ideas",
+    "summary": "A workbench for LLMs, NLP and on-device experiments. Prototypes allowed to stay prototypes.",
+    "atmosphere": {
+      "accent": "#b79cff",
+      "ink": "#f1ecff",
+      "from": "#0a0715",
+      "mid": "#231653",
+      "to": "#070510",
+      "mood": "electric"
+    }
+  },
+  {
+    "id": "photography",
+    "index": "03",
+    "slug": "photography",
+    "route": "/photography",
+    "title": "Photography",
+    "kicker": "Selected frames",
+    "subtitle": "Light, places, moments",
+    "summary": "Series and single frames. The image leads; everything else stays out of the way.",
+    "atmosphere": {
+      "accent": "#e7c9a0",
+      "ink": "#f6efe6",
+      "from": "#12100d",
+      "mid": "#2a231b",
+      "to": "#0a0908",
+      "mood": "warm"
+    }
+  },
+  {
+    "id": "skating",
+    "index": "04",
+    "slug": "skating",
+    "route": "/skating",
+    "title": "Skating",
+    "kicker": "Sessions & spots",
+    "subtitle": "Concrete, motion, patience",
+    "summary": "Spots, sessions and small stories. Personal notes rather than a highlight reel.",
+    "atmosphere": {
+      "accent": "#ff9e6d",
+      "ink": "#fdeadf",
+      "from": "#140d0a",
+      "mid": "#3a2118",
+      "to": "#0b0706",
+      "mood": "dusk"
+    }
+  },
+  {
+    "id": "languages",
+    "index": "05",
+    "slug": "languages",
+    "route": "/languages",
+    "title": "Languages",
+    "kicker": "Words I live in",
+    "subtitle": "Between tongues",
+    "summary": "The languages I speak and study — less a skill bar, more a relationship with each one.",
+    "atmosphere": {
+      "accent": "#d8b892",
+      "ink": "#f4ece0",
+      "from": "#100d0a",
+      "mid": "#241d15",
+      "to": "#090705",
+      "mood": "paper"
+    }
+  },
+  {
+    "id": "music",
+    "index": "06",
+    "slug": "music",
+    "route": "/music",
+    "title": "Music",
+    "kicker": "On repeat",
+    "subtitle": "What's playing",
+    "summary": "A small window into what I listen to — artists, records and recent discoveries.",
+    "atmosphere": {
+      "accent": "#ff8fd0",
+      "ink": "#ffe9f6",
+      "from": "#120818",
+      "mid": "#341041",
+      "to": "#0a050f",
+      "mood": "night"
+    }
+  },
+  {
+    "id": "places",
+    "index": "07",
+    "slug": "places",
+    "route": "/places",
+    "title": "Places",
+    "kicker": "Where I've been",
+    "subtitle": "Cities & distances",
+    "summary": "Chile, France and the spaces in between — geography as a personal archive.",
+    "atmosphere": {
+      "accent": "#6fd6c8",
+      "ink": "#e6fbf6",
+      "from": "#04120f",
+      "mid": "#0c3a34",
+      "to": "#030b09",
+      "mood": "ocean"
+    }
+  },
+  {
+    "id": "about",
+    "index": "08",
+    "slug": "about",
+    "route": "/about",
+    "title": "About",
+    "kicker": "The longer story",
+    "subtitle": "Curiosity, mostly",
+    "summary": "How software, images, languages and movement ended up in the same person.",
+    "atmosphere": {
+      "accent": "#f0c874",
+      "ink": "#faf1dd",
+      "from": "#12100a",
+      "mid": "#2e2513",
+      "to": "#090705",
+      "mood": "gold"
+    }
+  },
+  {
+    "id": "cv",
+    "index": "09",
+    "slug": "cv",
+    "route": "/cv",
+    "title": "CV",
+    "kicker": "The formal version",
+    "subtitle": "Experience & skills",
+    "summary": "Experience, education and skills — on the page and as a downloadable PDF.",
+    "atmosphere": {
+      "accent": "#aab7c4",
+      "ink": "#eef2f6",
+      "from": "#0a0d10",
+      "mid": "#1d2730",
+      "to": "#06080a",
+      "mood": "graphite"
+    }
+  },
+  {
+    "id": "contact",
+    "index": "10",
+    "slug": "contact",
+    "route": "/contact",
+    "title": "Contact",
+    "kicker": "Say hello",
+    "subtitle": "Open to a message",
+    "summary": "Email, GitHub, LinkedIn — or send a message straight from here.",
+    "atmosphere": {
+      "accent": "#7fe0a8",
+      "ink": "#e4fbec",
+      "from": "#05120c",
+      "mid": "#0e3826",
+      "to": "#030b07",
+      "mood": "emerald"
+    }
+  }
+]

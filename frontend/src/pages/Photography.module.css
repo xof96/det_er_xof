@@ -1,0 +1,111 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-bottom: clamp(2rem, 5vh, 3rem);
+}
+
+.filter {
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.filter:hover {
+  color: var(--ink-0);
+}
+
+.filter[data-active='true'] {
+  color: var(--accent-ink);
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.collection {
+  margin-bottom: clamp(3.5rem, 9vh, 6rem);
+}
+
+.collHead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  margin-bottom: clamp(1.25rem, 3vh, 2rem);
+}
+
+.collTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  letter-spacing: -0.01em;
+}
+
+.collSub {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  margin-top: 0.25rem;
+}
+
+.collDesc {
+  max-width: 44ch;
+  color: var(--ink-1);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+
+.gallery {
+  columns: 3 260px;
+  column-gap: clamp(0.75rem, 1.5vw, 1.1rem);
+}
+
+.tile {
+  break-inside: avoid;
+  margin-bottom: clamp(0.75rem, 1.5vw, 1.1rem);
+  width: 100%;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  cursor: zoom-in;
+  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.tile:hover {
+  transform: translateY(-3px) scale(1.006);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.tileInner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--tile-ratio, 3 / 2);
+}
+
+.tileCap {
+  position: absolute;
+  left: var(--sp-3);
+  bottom: var(--sp-3);
+  z-index: 3;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-0);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.tile:hover .tileCap,
+.tile:focus-within .tileCap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .gallery {
+    columns: 2 150px;
+  }
+}

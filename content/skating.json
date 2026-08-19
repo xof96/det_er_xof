@@ -1,0 +1,25 @@
+{
+  "intro": "Spots, sessions and small stories. Not a highlight reel — just the personal record of rolling around.",
+  "sessions": [
+    {
+      "id": "session-1",
+      "title": "__EDITABLE__ A spot worth returning to",
+      "spot": null,
+      "date": null,
+      "accent": "#ff9e6d",
+      "cover": { "kind": "gradient", "from": "#3a2118", "to": "#0b0706", "accent": "#ff9e6d" },
+      "note": "__EDITABLE__ Write a short note about this session — the spot, the weather, who was there, what you were working on.",
+      "media": []
+    },
+    {
+      "id": "session-2",
+      "title": "__EDITABLE__ Learning something new",
+      "spot": null,
+      "date": null,
+      "accent": "#ffbe8d",
+      "cover": { "kind": "gradient", "from": "#432a1c", "to": "#0d0806", "accent": "#ffbe8d" },
+      "note": "__EDITABLE__ Add a short story. Photos or short clips can go in media[] as { kind, src }.",
+      "media": []
+    }
+  ]
+}

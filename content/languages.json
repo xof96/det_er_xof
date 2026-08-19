@@ -1,0 +1,43 @@
+{
+  "intro": "Languages aren't a progress bar. They're places you live in for a while.",
+  "greetings": ["hola", "bonjour", "hello", "hallo", "hej", "olá", "ciao"],
+  "languages": [
+    {
+      "id": "es",
+      "name": "Spanish",
+      "native": "Español",
+      "accent": "#f0c874",
+      "level": "Native",
+      "levelEditable": false,
+      "relationship": "The language I think in.",
+      "note": "__EDITABLE__ Add a personal note — where it's from, what it sounds like to you.",
+      "phrase": "hola"
+    },
+    {
+      "id": "en",
+      "name": "English",
+      "native": "English",
+      "accent": "#7fb2ff",
+      "level": "__EDITABLE__ e.g. Working / Fluent",
+      "levelEditable": true,
+      "relationship": "__EDITABLE__ The language most of my technical world runs in.",
+      "note": "__EDITABLE__ Add how you use it day to day.",
+      "phrase": "hello"
+    },
+    {
+      "id": "fr",
+      "name": "French",
+      "native": "Français",
+      "accent": "#b79cff",
+      "level": "__EDITABLE__ e.g. Learning",
+      "levelEditable": true,
+      "relationship": "__EDITABLE__ A language I'm actively learning.",
+      "note": "__EDITABLE__ Add what you're working on — a phrase, a stumbling block, a small win.",
+      "phrase": "bonjour"
+    }
+  ],
+  "learningNow": {
+    "title": "Currently learning",
+    "body": "__EDITABLE__ Note what you're focused on right now — a language, a level, a small cultural detail you just learned."
+  }
+}

@@ -1,0 +1,68 @@
+.wrap {
+  margin-top: clamp(3rem, 8vh, 5rem);
+}
+
+.repoGrid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.repo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.repo:hover {
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  transform: translateY(-3px);
+}
+
+.repoHead {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.repoName {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink-0);
+}
+
+.repoDesc {
+  color: var(--ink-1);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.repoMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--ink-2);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.empty {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  padding: var(--sp-4);
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-md);
+}

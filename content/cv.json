@@ -1,0 +1,37 @@
+{
+  "name": "__EDITABLE__ Your name",
+  "title": "__EDITABLE__ e.g. Software Engineer",
+  "location": "__EDITABLE__ City, Country",
+  "summary": "__EDITABLE__ A two-line professional summary.",
+  "pdf": "/cv/cv.pdf",
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "__EDITABLE__ Role",
+      "org": "__EDITABLE__ Organisation",
+      "start": "__EDITABLE__ 20XX",
+      "end": "__EDITABLE__ Present",
+      "location": null,
+      "bullets": [
+        "__EDITABLE__ A concrete thing you did and its impact.",
+        "__EDITABLE__ Another responsibility or achievement."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "program": "__EDITABLE__ Degree / programme",
+      "org": "__EDITABLE__ Institution",
+      "start": "__EDITABLE__ 20XX",
+      "end": "__EDITABLE__ 20XX",
+      "note": null
+    }
+  ],
+  "skills": [
+    { "group": "Languages & runtimes", "items": ["__EDITABLE__ Python", "__EDITABLE__ JavaScript"] },
+    { "group": "Frontend", "items": ["__EDITABLE__ React", "__EDITABLE__ Vite"] },
+    { "group": "Backend", "items": ["__EDITABLE__ FastAPI", "__EDITABLE__ SQLite"] },
+    { "group": "Interests", "items": ["AI / NLP", "Photography", "Languages"] }
+  ]
+}

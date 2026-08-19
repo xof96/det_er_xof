@@ -1,0 +1,18 @@
+{
+  "intro": "A small window into what I listen to. No Spotify wiring yet — just a hand-kept list.",
+  "nowPlaying": {
+    "title": "__EDITABLE__ Currently on repeat",
+    "artist": "__EDITABLE__ Artist",
+    "note": "__EDITABLE__ A line about why it's stuck with you.",
+    "accent": "#ff8fd0"
+  },
+  "artists": [
+    { "id": "a1", "name": "__EDITABLE__ An artist you love", "note": "__EDITABLE__ Why.", "accent": "#ff8fd0" },
+    { "id": "a2", "name": "__EDITABLE__ A recent discovery", "note": "__EDITABLE__ Where you found them.", "accent": "#c39bff" },
+    { "id": "a3", "name": "__EDITABLE__ An old favourite", "note": "__EDITABLE__ What it reminds you of.", "accent": "#8fb8ff" }
+  ],
+  "records": [
+    { "id": "r1", "title": "__EDITABLE__ An album", "artist": "__EDITABLE__ Artist", "year": null, "cover": { "kind": "gradient", "from": "#341041", "to": "#0a050f", "accent": "#ff8fd0" } },
+    { "id": "r2", "title": "__EDITABLE__ Another album", "artist": "__EDITABLE__ Artist", "year": null, "cover": { "kind": "gradient", "from": "#1b1040", "to": "#08050f", "accent": "#b79cff" } }
+  ]
+}

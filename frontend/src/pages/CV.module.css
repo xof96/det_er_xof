@@ -1,0 +1,126 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-5);
+  flex-wrap: wrap;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+
+.identity {
+  max-width: 60ch;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+}
+
+.role {
+  color: var(--ink-1);
+  margin: 0.35rem 0 var(--sp-3);
+}
+
+.bio {
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: var(--r-pill);
+  color: var(--bg-0);
+  background: var(--accent);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: transform var(--dur-fast) var(--ease-out), filter var(--dur-fast) var(--ease-out);
+}
+
+.download:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: var(--sp-4) 0;
+  border-top: 1px solid var(--line);
+}
+
+.entryTime {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  padding-top: 0.3rem;
+}
+
+.entryTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+}
+
+.entryOrg {
+  color: var(--ink-1);
+  margin: 0.2rem 0 var(--sp-3);
+  font-size: var(--fs-sm);
+}
+
+.entryNote {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 1.3rem;
+  color: var(--ink-1);
+  line-height: 1.55;
+  font-size: var(--fs-sm);
+}
+
+.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.skills {
+  display: grid;
+  gap: var(--sp-5);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+}
+
+.skillGroupTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  margin-bottom: var(--sp-3);
+}
+
+@media (max-width: 560px) {
+  .entry {
+    grid-template-columns: 1fr;
+    gap: var(--sp-2);
+  }
+}

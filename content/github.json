@@ -1,0 +1,4 @@
+{
+  "note": "Curated list of repositories to feature. The backend enriches each entry with live GitHub data (stars, forks, language, topics, updated date) and caches the result. Add repos as \"owner/name\". Leave empty to hide the GitHub strip.",
+  "featured": []
+}

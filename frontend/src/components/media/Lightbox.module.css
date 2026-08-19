@@ -1,0 +1,126 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background: rgba(3, 4, 8, 0.9);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: clamp(2rem, 6vh, 5rem) clamp(3.5rem, 8vw, 7rem) 0;
+  min-height: 0;
+}
+
+.frame {
+  position: relative;
+  max-width: min(1100px, 92vw);
+  max-height: 74vh;
+  width: 100%;
+  aspect-ratio: var(--frame-ratio, 3 / 2);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-card);
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink-0);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  transition: background var(--dur-fast) var(--ease-out);
+  z-index: 2;
+}
+
+.nav:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 25%, var(--glass-bg));
+}
+
+.nav:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.prev {
+  left: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.next {
+  right: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.close {
+  position: absolute;
+  top: clamp(1rem, 3vh, 1.75rem);
+  right: clamp(1rem, 3vw, 1.75rem);
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink-0);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  z-index: 3;
+}
+
+.caption {
+  padding: clamp(1.25rem, 3vh, 2rem) var(--gutter) clamp(1.5rem, 4vh, 2.5rem);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.capText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 60ch;
+}
+
+.capTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+}
+
+.capMeta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  color: var(--ink-2);
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.counter {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  letter-spacing: 0.15em;
+  color: var(--ink-2);
+}
+.counter b {
+  color: var(--accent-ink);
+  font-weight: 500;
+}
+
+.nav svg,
+.close svg {
+  width: 20px;
+  height: 20px;
+}

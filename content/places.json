@@ -1,0 +1,32 @@
+{
+  "intro": "Geography as a personal archive — the places that shaped things, and the distance between them.",
+  "places": [
+    {
+      "id": "chile",
+      "name": "Chile",
+      "kind": "Home",
+      "coords": null,
+      "accent": "#6fd6c8",
+      "cover": { "kind": "gradient", "from": "#0c3a34", "to": "#030b09", "accent": "#6fd6c8" },
+      "story": "__EDITABLE__ Write about your relationship with Chile — a city, a landscape, a memory."
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "kind": "Elsewhere",
+      "coords": null,
+      "accent": "#7fb2ff",
+      "cover": { "kind": "gradient", "from": "#1a2b52", "to": "#070b16", "accent": "#7fb2ff" },
+      "story": "__EDITABLE__ Write about France — why it matters, what you associate with it."
+    },
+    {
+      "id": "add-a-place",
+      "name": "__EDITABLE__ Add a place",
+      "kind": "Template",
+      "coords": null,
+      "accent": "#e7c9a0",
+      "cover": { "kind": "gradient", "from": "#2a231b", "to": "#0a0908", "accent": "#e7c9a0" },
+      "story": "__EDITABLE__ Duplicate this entry in content/places.json for each city or trip you want to add."
+    }
+  ]
+}

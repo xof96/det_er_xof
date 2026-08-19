@@ -1,0 +1,24 @@
+{
+  "lead": "__EDITABLE__ One or two sentences in your own voice — who you are when you're not describing yourself as a job title.",
+  "chapters": [
+    {
+      "id": "curiosity",
+      "title": "Curiosity, mostly",
+      "body": "__EDITABLE__ The thread that runs through everything here is curiosity — software, images, languages, movement. Write the version that's true for you.",
+      "accent": "#f0c874"
+    },
+    {
+      "id": "software",
+      "title": "Software & AI",
+      "body": "__EDITABLE__ How you got into building things, and what pulls you toward AI right now.",
+      "accent": "#7fb2ff"
+    },
+    {
+      "id": "beyond",
+      "title": "Beyond the screen",
+      "body": "__EDITABLE__ Photography, skating, music, places — the parts of you that aren't code, and why they belong on the same page.",
+      "accent": "#ff9e6d"
+    }
+  ],
+  "threads": ["software", "artificial intelligence", "photography", "languages", "places", "curiosity"]
+}

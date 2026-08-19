@@ -1,0 +1,47 @@
+{
+  "intro": "Series and single frames. Replace these placeholders with your own images — drop files in assets/ and point each frame's `src` at them.",
+  "collections": [
+    {
+      "slug": "cities-after-dark",
+      "title": "Cities After Dark",
+      "subtitle": "Long exposures and neon",
+      "year": null,
+      "location": null,
+      "description": "__EDITABLE__ A night series — describe the intent of the collection here.",
+      "cover": { "kind": "gradient", "from": "#1a2740", "to": "#070b14", "accent": "#7fb2ff" },
+      "frames": [
+        { "id": "cad-1", "kind": "gradient", "from": "#243b63", "to": "#0a1120", "accent": "#8fb8ff", "ratio": "3x2", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null },
+        { "id": "cad-2", "kind": "gradient", "from": "#3a2b52", "to": "#0d0916", "accent": "#c39bff", "ratio": "2x3", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null },
+        { "id": "cad-3", "kind": "gradient", "from": "#123a44", "to": "#050f12", "accent": "#6fd6c8", "ratio": "3x2", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null },
+        { "id": "cad-4", "kind": "gradient", "from": "#402032", "to": "#12060d", "accent": "#ff8fd0", "ratio": "3x2", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null }
+      ]
+    },
+    {
+      "slug": "open-roads",
+      "title": "Open Roads",
+      "subtitle": "Distance and weather",
+      "year": null,
+      "location": null,
+      "description": "__EDITABLE__ Landscapes and roads — replace with your own frames and notes.",
+      "cover": { "kind": "gradient", "from": "#3a2b1c", "to": "#0c0806", "accent": "#e7c9a0" },
+      "frames": [
+        { "id": "or-1", "kind": "gradient", "from": "#4a3826", "to": "#100a06", "accent": "#e7c9a0", "ratio": "3x2", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null },
+        { "id": "or-2", "kind": "gradient", "from": "#2a3a2a", "to": "#080f08", "accent": "#9ed6a0", "ratio": "3x2", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null },
+        { "id": "or-3", "kind": "gradient", "from": "#3f3320", "to": "#0e0b06", "accent": "#f0c874", "ratio": "2x3", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null }
+      ]
+    },
+    {
+      "slug": "close-quiet",
+      "title": "Close & Quiet",
+      "subtitle": "Details and stillness",
+      "year": null,
+      "location": null,
+      "description": "__EDITABLE__ Intimate, quiet frames — swap for your own.",
+      "cover": { "kind": "gradient", "from": "#2a2340", "to": "#0a0812", "accent": "#b79cff" },
+      "frames": [
+        { "id": "cq-1", "kind": "gradient", "from": "#33294d", "to": "#0b0814", "accent": "#b79cff", "ratio": "3x2", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null },
+        { "id": "cq-2", "kind": "gradient", "from": "#23384a", "to": "#070d12", "accent": "#7fd0e0", "ratio": "3x2", "title": "__EDITABLE__ Untitled", "location": null, "year": null, "src": null }
+      ]
+    }
+  ]
+}

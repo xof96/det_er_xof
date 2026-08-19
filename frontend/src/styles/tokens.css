@@ -1,0 +1,120 @@
+/* =============================================================
+   Personal Atlas — Design System Tokens
+   Dark, cinematic, photography-first. Per-section accents are
+   injected at runtime as --accent / --atmos-* custom properties.
+   ============================================================= */
+
+:root {
+  /* --- Base surfaces (near-black, cool) --- */
+  --bg-0: #05070c;         /* page base */
+  --bg-1: #0a0e16;         /* raised surface */
+  --bg-2: #121826;         /* cards / panels */
+  --bg-3: #1b2434;         /* hover / elevated */
+
+  /* --- Ink --- */
+  --ink-0: #f4f7fb;        /* primary text */
+  --ink-1: #c2ccda;        /* secondary text */
+  --ink-2: #8794a6;        /* muted text */
+  --ink-3: #56617a;        /* faint / captions */
+
+  /* --- Lines & glass --- */
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --glass-bg: rgba(16, 22, 34, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-highlight: rgba(255, 255, 255, 0.06);
+
+  /* --- Accent (overridden per active section at runtime) --- */
+  --accent: #7fb2ff;
+  --accent-ink: #eaf1ff;
+
+  /* --- Reactive atmosphere (overridden at runtime) --- */
+  --atmos-from: #070c16;
+  --atmos-mid: #12233f;
+  --atmos-to: #050810;
+
+  /* --- Typography --- */
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Fira Code', Menlo, monospace;
+
+  /* Fluid type scale (clamp: min, preferred, max) */
+  --fs-display: clamp(2.75rem, 6vw + 1rem, 6rem);
+  --fs-h1: clamp(2rem, 3.5vw + 1rem, 3.5rem);
+  --fs-h2: clamp(1.5rem, 2vw + 0.75rem, 2.25rem);
+  --fs-h3: clamp(1.15rem, 1vw + 0.75rem, 1.4rem);
+  --fs-body: clamp(1rem, 0.4vw + 0.9rem, 1.125rem);
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fs-kicker: 0.72rem;
+
+  --tracking-kicker: 0.28em;
+  --tracking-wide: 0.06em;
+  --leading-tight: 1.05;
+  --leading-snug: 1.25;
+  --leading-body: 1.6;
+
+  /* --- Spacing scale (8px base) --- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  /* --- Radii --- */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 30px;
+  --r-pill: 999px;
+
+  /* --- Shadows / depth --- */
+  --shadow-card: 0 30px 80px -30px rgba(0, 0, 0, 0.75), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+  --shadow-soft: 0 12px 40px -18px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 20px 60px -20px color-mix(in srgb, var(--accent) 40%, transparent);
+
+  /* --- Blur --- */
+  --blur-glass: 18px;
+  --blur-side: 1.5px;
+
+  /* --- Motion --- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 180ms;
+  --dur-mid: 380ms;
+  --dur-slow: 700ms;
+  --dur-atmos: 1100ms;
+
+  /* --- Carousel depth system --- */
+  --depth-active-scale: 1;
+  --depth-1-scale: 0.86;
+  --depth-2-scale: 0.72;
+  --depth-1-opacity: 0.7;
+  --depth-2-opacity: 0.38;
+
+  /* --- Layout --- */
+  --page-max: 1280px;
+  --content-max: 900px;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --header-h: 72px;
+
+  color-scheme: dark;
+}
+
+/* Light theme is intentionally not offered: the experience is a dark,
+   cinematic space. We still respect reduced motion and reduced data. */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-mid: 0ms;
+    --dur-slow: 0ms;
+    --dur-atmos: 0ms;
+  }
+}

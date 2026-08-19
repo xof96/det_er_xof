@@ -1,0 +1,38 @@
+{
+  "intro": "A workbench, not a showroom. Experiments, notebooks and small technical probes that are interesting precisely because they aren't finished products.",
+  "experiments": [
+    {
+      "slug": "on-device-reformulation",
+      "title": "On-device reformulation probe",
+      "kind": "Research",
+      "status": "exploring",
+      "year": 2026,
+      "accent": "#b79cff",
+      "tags": ["LLM", "on-device", "privacy", "NLP"],
+      "summary": "__EDITABLE__ Notes and experiments around running text reformulation locally on a phone — the research strand feeding Redactame. Add findings here as they land.",
+      "links": { "repo": null, "notebook": null }
+    },
+    {
+      "slug": "speech-to-intent",
+      "title": "Speech → intent notes",
+      "kind": "Notebook",
+      "status": "draft",
+      "year": 2026,
+      "accent": "#9c8cff",
+      "tags": ["speech-to-text", "prompting", "evaluation"],
+      "summary": "__EDITABLE__ A scratch space for testing transcription + reformulation prompts and measuring whether meaning is preserved. Replace with real experiments.",
+      "links": { "repo": null, "notebook": null }
+    },
+    {
+      "slug": "your-next-experiment",
+      "title": "Your next experiment",
+      "kind": "Template",
+      "status": "template",
+      "year": 2026,
+      "accent": "#8ea2ff",
+      "tags": ["template"],
+      "summary": "__EDITABLE__ Duplicate this entry in content/ai-lab.json to add a new experiment. Small, unfinished and curious is exactly the point.",
+      "links": { "repo": null, "notebook": null }
+    }
+  ]
+}

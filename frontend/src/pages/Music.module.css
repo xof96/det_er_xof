@@ -1,0 +1,122 @@
+.now {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  border-radius: var(--r-lg);
+  border: 1px solid color-mix(in srgb, var(--n-accent) 35%, var(--line));
+  background:
+    radial-gradient(120% 120% at 0% 0%, color-mix(in srgb, var(--n-accent) 18%, transparent), transparent 60%),
+    rgba(255, 255, 255, 0.015);
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+
+.pulse {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 46px;
+}
+
+.pulse span {
+  width: 5px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--n-accent) 85%, white);
+  animation: bounce 1s ease-in-out infinite;
+}
+.pulse span:nth-child(1) { height: 40%; animation-delay: -0.2s; }
+.pulse span:nth-child(2) { height: 90%; animation-delay: -0.5s; }
+.pulse span:nth-child(3) { height: 60%; animation-delay: -0.1s; }
+.pulse span:nth-child(4) { height: 100%; animation-delay: -0.35s; }
+
+@keyframes bounce {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse span { animation: none; }
+}
+
+.nowLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--n-accent) 80%, white);
+}
+
+.nowTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  margin: 0.2rem 0;
+}
+
+.nowArtist {
+  color: var(--ink-1);
+}
+
+.nowNote {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  margin-top: var(--sp-2);
+  max-width: 52ch;
+}
+
+.artists {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.artist {
+  padding: clamp(1.2rem, 2.5vw, 1.6rem);
+  border-radius: var(--r-md);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.artistDot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--n-accent);
+  margin-bottom: var(--sp-3);
+}
+
+.artistName {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  margin-bottom: var(--sp-2);
+}
+
+.artistNote {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+
+.records {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+
+.cover {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  margin-bottom: var(--sp-3);
+}
+
+.recTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+}
+
+.recArtist {
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+}

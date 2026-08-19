@@ -1,0 +1,123 @@
+.page {
+  min-height: 100dvh;
+  padding-top: var(--header-h);
+}
+
+.hero {
+  position: relative;
+  padding: clamp(3rem, 12vh, 8rem) var(--gutter) clamp(2rem, 6vh, 4rem);
+  max-width: var(--page-max);
+  margin-inline: auto;
+}
+
+.heroInner {
+  max-width: 60ch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.heroKicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-kicker);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--accent) 80%, white);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.heroIndex {
+  color: var(--ink-3);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-display);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.summary {
+  font-size: var(--fs-h3);
+  color: var(--ink-1);
+  line-height: 1.4;
+  max-width: 48ch;
+}
+
+.body {
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: 0 var(--gutter) clamp(4rem, 12vh, 8rem);
+}
+
+/* --- Footer section nav --- */
+.footerNav {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vh, 6rem) var(--gutter) clamp(4rem, 10vh, 7rem);
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.navLink {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: var(--ink-2);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.navLink:hover {
+  color: var(--ink-0);
+}
+
+.navLink[data-align='right'] {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.navLabel {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.navTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  color: inherit;
+}
+
+.toAtlas {
+  order: -1;
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: var(--sp-4);
+}
+
+.toAtlasBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--r-pill);
+  color: var(--ink-0);
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.03);
+  transition: background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.toAtlasBtn:hover {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}

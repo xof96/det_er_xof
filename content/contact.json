@@ -1,0 +1,12 @@
+{
+  "intro": "Open to a message — about a project, a photo, a language, or anything on this atlas.",
+  "email": "__EDITABLE__ your@email.com",
+  "channels": [
+    { "id": "github", "label": "GitHub", "handle": "__EDITABLE__ your-username", "url": "__EDITABLE__ https://github.com/your-username" },
+    { "id": "linkedin", "label": "LinkedIn", "handle": "__EDITABLE__ your-name", "url": "__EDITABLE__ https://www.linkedin.com/in/your-name" }
+  ],
+  "form": {
+    "enabled": true,
+    "note": "Messages are validated and stored by the backend. Email delivery is optional and turns on via SMTP environment variables."
+  }
+}

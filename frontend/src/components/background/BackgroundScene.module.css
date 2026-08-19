@@ -1,0 +1,69 @@
+.scene {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--bg-0);
+  pointer-events: none;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+}
+
+/* Base atmospheric gradient built from the active section colours. */
+.gradient {
+  position: absolute;
+  inset: -10%;
+  background:
+    radial-gradient(120% 90% at 78% 12%, color-mix(in srgb, var(--l-accent) 34%, transparent) 0%, transparent 46%),
+    radial-gradient(90% 80% at 20% 90%, color-mix(in srgb, var(--l-mid) 85%, transparent) 0%, transparent 55%),
+    linear-gradient(155deg, var(--l-from) 0%, var(--l-mid) 52%, var(--l-to) 100%);
+}
+
+/* Optional photographic layer (when a section provides an image). */
+.image {
+  position: absolute;
+  inset: -6%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* Soft moving light bloom tied to the accent. */
+.bloom {
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  top: -18vmax;
+  right: -10vmax;
+  background: radial-gradient(circle, color-mix(in srgb, var(--l-accent) 40%, transparent) 0%, transparent 62%);
+  filter: blur(30px);
+  will-change: transform, opacity;
+}
+
+/* Grain + vignette overlays sit above every crossfading layer. */
+.grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: var(--grain-url);
+  background-size: 180px 180px;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(130% 120% at 50% 0%, transparent 55%, rgba(0, 0, 0, 0.55) 100%),
+    linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bloom {
+    animation: none !important;
+  }
+}

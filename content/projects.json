@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "redactame",
+    "title": "Redactame",
+    "tagline": "A voice-first Android keyboard that turns how you talk into how you meant to write it.",
+    "status": "in-development",
+    "featured": true,
+    "year": 2026,
+    "role": "Concept, design & engineering",
+    "cover": { "kind": "gradient", "from": "#1b2a4a", "to": "#0a1120", "accent": "#7fb2ff", "glyph": "⌨" },
+    "tech": ["Android", "IME / Keyboard", "Speech-to-text", "LLM reformulation", "On-device privacy (research)"],
+    "topics": ["voice", "ai", "nlp", "android", "translation"],
+    "links": { "github": null, "demo": null },
+    "repo": null,
+    "editable": true,
+    "summary": "An Android input method (IME) built around voice and AI: speak casually, and it transcribes and reformulates the text into something appropriate to send — including across languages.",
+    "caseStudy": {
+      "context": "Typing on a phone is slow, and the register we speak in is rarely the register we want to send. Redactame starts from voice instead of the keyboard.",
+      "problem": "How do you go from informal, spoken thoughts to a clean, appropriately-worded message — sometimes in another language — without losing meaning or inventing things that weren't said?",
+      "idea": "A keyboard (IME) you talk to. It listens, transcribes, and rewrites: fixing register, tightening phrasing, and optionally translating — Spanish → French / English being the primary path.",
+      "solution": "The current focus is the voice → transcription → reformulation → send loop, with a hard rule that reformulation must preserve meaning and never fabricate information the speaker didn't provide.",
+      "goals": [
+        "Speak informally and get send-ready text back.",
+        "Reformulate for appropriateness while preserving intent.",
+        "Support transformation between languages, especially Spanish → French / English.",
+        "Preserve meaning — never invent facts that weren't said.",
+        "Research local / on-device processing and privacy tradeoffs."
+      ],
+      "decisions": [
+        "__EDITABLE__ Technical decisions will be documented here as they are made. Nothing below is claimed as implemented yet."
+      ],
+      "architecture": "__EDITABLE__ Architecture notes to be added as the IME, speech and reformulation layers take shape.",
+      "challenges": [
+        "__EDITABLE__ Latency of the voice → text → rewrite loop on a phone.",
+        "__EDITABLE__ Keeping reformulation faithful to the original meaning.",
+        "__EDITABLE__ On-device vs. remote processing and what that means for privacy."
+      ],
+      "learnings": [
+        "__EDITABLE__ Learnings will be captured here as the project progresses."
+      ]
+    },
+    "screenshots": []
+  },
+  {
+    "slug": "personal-atlas",
+    "title": "Personal Atlas",
+    "tagline": "This site — a spatial, photography-first way to explore a person instead of a résumé.",
+    "status": "live",
+    "featured": true,
+    "year": 2026,
+    "role": "Design & full-stack engineering",
+    "cover": { "kind": "gradient", "from": "#101826", "to": "#05070c", "accent": "#7fe0a8", "glyph": "◎" },
+    "tech": ["React", "Vite", "Framer Motion", "FastAPI", "SQLite", "Playwright"],
+    "topics": ["frontend", "ux", "python", "api"],
+    "links": { "github": null, "demo": null },
+    "repo": null,
+    "editable": true,
+    "summary": "A personal portfolio built as a spatial card navigator: the home page is the browser, each section is a card, and the whole atmosphere reacts to what you've selected.",
+    "caseStudy": {
+      "context": "Most developer portfolios read like a template — hero, logos, three project cards, contact. This one treats a life as an atlas of overlapping interests.",
+      "problem": "How do you present software, AI, photography, skating, languages, music and places as one coherent, explorable space rather than a list?",
+      "idea": "Make the home page a spatial carousel. A dominant central card, receding side cards, and a background that re-colours the entire page to match the active section — the way selecting a trip re-grades the whole scene.",
+      "solution": "A data-driven system: one carousel and one card component render every section from a single JSON source. A reactive background crossfades atmospheres, and clicking the active card expands it into the section via shared-layout transitions.",
+      "goals": [
+        "Home page that works as the portfolio's navigator.",
+        "Reactive, cinematic background tied to the active section.",
+        "Content fully data-driven and editable without touching components.",
+        "First-class desktop and mobile behaviour, with reduced-motion support."
+      ],
+      "decisions": [
+        "Single source of truth for content in a shared `content/` directory read by both the SPA and the API.",
+        "Framer Motion for physical carousel motion and shared-layout card → page transitions.",
+        "CSS-transform-only animation (no WebGL) for performance and accessibility.",
+        "FastAPI backend for the GitHub integration and contact form so no secrets touch the browser."
+      ],
+      "architecture": "Vite + React SPA with React Router; FastAPI service exposing sections, projects, curated GitHub repos and a validated contact endpoint backed by SQLite.",
+      "challenges": [
+        "Keeping the carousel motion physical rather than index-swapping.",
+        "Crossfading full-screen atmospheres without flashes or layout shift.",
+        "Making the spatial layout degrade gracefully to a single-card mobile view."
+      ],
+      "learnings": [
+        "A strict data-driven contract makes a 10-section site trivial to reorder and grow.",
+        "Shared-layout transitions carry most of the 'cinematic' feeling at almost no runtime cost."
+      ]
+    },
+    "screenshots": []
+  }
+]

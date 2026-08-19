@@ -1,0 +1,80 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.exp {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-5);
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.exp:hover {
+  border-color: color-mix(in srgb, var(--exp-accent) 45%, transparent);
+}
+
+.expIndex {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: color-mix(in srgb, var(--exp-accent) 80%, white);
+  padding-top: 0.35rem;
+}
+
+.expHead {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--sp-3);
+}
+
+.expTitle {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+}
+
+.kind {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.status {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--r-pill);
+  border: 1px solid color-mix(in srgb, var(--exp-accent) 40%, transparent);
+  color: color-mix(in srgb, var(--exp-accent) 85%, white);
+}
+
+.expSummary {
+  color: var(--ink-1);
+  line-height: 1.6;
+  margin-bottom: var(--sp-3);
+}
+
+.expLinks {
+  display: flex;
+  gap: var(--sp-4);
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
+}
+
+@media (max-width: 560px) {
+  .exp {
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+}
