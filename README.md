@@ -113,20 +113,24 @@ det_er_xof/
 
 ## Getting started
 
-Prerequisites: **Node 18+** and **Python 3.12+**.
+Prerequisites: **Node 18+** and **Python 3.12+** on your `PATH`
+(`node --version`, `python --version`). Run the backend and the frontend in
+**two separate terminals**. The `.venv`, `node_modules` and the SQLite database
+are not committed, so a fresh clone builds them on first run.
 
-### Backend
+### Linux / macOS
+
+**Terminal 1 — backend** (API on port 8000):
 
 ```bash
 cd backend
-python -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements-dev.txt
 uvicorn app.main:app --reload --port 8000
 ```
 
-API docs: <http://localhost:8000/docs>.
-
-### Frontend
+**Terminal 2 — frontend** (dev server on port 5173):
 
 ```bash
 cd frontend
@@ -134,17 +138,54 @@ npm install
 npm run dev
 ```
 
-Open <http://localhost:5173>. The dev server proxies `/api` to the backend on
-port 8000, so run both for the GitHub strip and contact form to work.
+### Windows
 
-### Or with Docker
+Use **PowerShell** (adjust the activate line for cmd — see the note below).
+
+**Terminal 1 — backend** (API on port 8000):
+
+```powershell
+cd backend
+py -3 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements-dev.txt
+uvicorn app.main:app --reload --port 8000
+```
+
+**Terminal 2 — frontend** (dev server on port 5173):
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Windows notes:
+
+- In **cmd** activate the venv with `.\.venv\Scripts\activate.bat` instead of the
+  PowerShell script.
+- If PowerShell blocks the activate script, allow it once for your user:
+  `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`.
+- If `py` is not found, use `python -m venv .venv` (the standard installer adds
+  `python`).
+
+### Then, on any OS
+
+- Frontend: <http://localhost:5173>
+- API docs (OpenAPI / Swagger): <http://localhost:8000/docs>
+
+The dev server proxies `/api` to the backend on port 8000, so run both for the
+GitHub strip and the contact form to work. To see only the design, the frontend
+alone is enough (those two features fail silently, by design).
+
+### Or with Docker (any OS)
 
 ```bash
 docker compose up --build
 ```
 
 Then open <http://localhost:8080> (nginx serves the SPA and proxies `/api` to the
-backend).
+backend). This needs no local Node or Python.
 
 ## Environment variables
 
