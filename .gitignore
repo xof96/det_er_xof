@@ -25,6 +25,7 @@ backend/atlas.db
 # --- Editors / OS ---
 .vscode/
 .idea/
+.claude/
 .DS_Store
 *.log
 
