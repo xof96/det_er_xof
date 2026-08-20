@@ -39,7 +39,7 @@ export function SectionCard({ section, active = false, onActivate, tabIndex = -1
       aria-label={`${section.title} — ${section.summary}`}
       whileTap={active ? { scale: 0.985 } : undefined}
     >
-      <motion.div className={styles.cover} layoutId={`cover-${section.id}`} />
+      <div className={styles.cover} />
       <span className={styles.watermark} aria-hidden="true">
         {section.index}
       </span>
@@ -55,9 +55,7 @@ export function SectionCard({ section, active = false, onActivate, tabIndex = -1
         <span className={styles.index}>
           {section.index} · {section.kicker}
         </span>
-        <motion.h3 className={styles.title} layoutId={`title-${section.id}`}>
-          {section.title}
-        </motion.h3>
+        <h3 className={styles.title}>{section.title}</h3>
         <span className={styles.subtitle}>{section.subtitle}</span>
       </div>
     </motion.button>
